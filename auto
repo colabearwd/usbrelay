@@ -1,0 +1,16 @@
+
+cd hidapi/
+
+./bootstrap
+./configure
+make
+make install
+
+cd ..
+
+# cd /usb-relay
+### hidapi-hidraw
+gcc -o usbrelay usbrelay.c -lhidapi-hidraw
+### hidapi-libusb
+gcc -o usbrelay usbrelay.c -lhidapi-libusb
+
